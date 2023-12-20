@@ -1,0 +1,38 @@
+/* Body styles */
+body {
+    width: 500px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+  }
+  
+  /* Button styles */
+  button, #bleu {
+    background-color: steelblue;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  /* Label and input styles */
+  label, input {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  /* Line styles for pieces */
+  .line-piece {
+    background-color: lightgrey;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  /* Line styles for total */
+  .line-total {
+    background-color: lightblue;
+    padding: 5px;
+    margin: 5px;
+  }
+  

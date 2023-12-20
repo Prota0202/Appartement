@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/style.css">
+<form action="/addpiece" method="POST">
+  <h2>Encoder les données de la pièce :</h2>
+  Pièce : <input name="piece" /><br>
+  Largeur : <input type="number" id="inputLargeur" name="largeur" /><br>
+  Longueur : <input type="number" id="inputLongueur" name="longueur" /><br>
+  <input  id="bleu" type="submit" />
+</form>
+
+<form action="/calculoneroom" method="POST">
+  <input type="submit" id="bleu" value="Calculer la surface total de la pièce" />
+</form>
+<span id="displayArea"></span><br>
+
+  <button type="button" onclick="goBack()">Revenir à la page principale</button>
+<script>
+  function goBack() {
+    window.location.href = "/";
+  }
+</script>
+
+<script>
+    function calculateArea() {
+      // Get the input values
+      var longueur = document.getElementById("inputLongueur").value;
+      var largeur = document.getElementById("inputLargeur").value;
+  
+      // Calculate the area
+      var area = longueur * largeur;
+  
+      // Display the area
+      document.getElementById("displayArea").innerText = "Surface de la pièce : " + area + " mètres carrés";
+    }
+  
+    function goBack() {
+      window.location.href = "/";
+    }
+  </script>

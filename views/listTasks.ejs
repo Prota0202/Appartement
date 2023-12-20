@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/style.css">
+<form action="/add" method="POST">
+  <h2>Encoder les données de la pièce :</h2>
+  Pièce : <input name="piece" /><br>
+  Largeur : <input type="number" name="largeur" /><br>
+  Longueur : <input type="number" name="longueur" /><br>
+  <input id="bleu" type="submit" />
+</form>
+
+<form action="/calcul" method="POST">
+  <input type="submit" id="bleu" value="Calculer la surface total de l'appartement" />
+</form>
+<%= totalarea %> mètres 
+
+<button type="button" onclick="goBack()">Revenir à la page principale</button>
+<script>
+  function goBack() {
+    window.location.href = "/";
+  }
+</script>
+
+<h2>Liste des pièces de l'appartement </h2>
+<ul>
+  <% for(elem of tasks){  %>
+  <li><%= elem.name %> <%= elem.length * elem.width %> mètres carré</li>
+  <% }  %>
+</ul>
+
+<form action="/addapiece" method="GET">
+  <input type="submit" id="bleu" value="Encoder une autre pièce" />
+</form> 
